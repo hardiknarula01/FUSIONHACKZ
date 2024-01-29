@@ -1,6 +1,6 @@
-# FUSIONHACKZ
+# FUSIONHACKZ<br>
 
-<h1>Expense Tracker Web App<h1><br>
+<h1>⭐️Expense Tracker Web App<h1><br>
 
   <h1>Problem Statement<h1> 
     <br>
@@ -8,7 +8,7 @@ Many individual struggle to effectively manage their personal finanaces that lea
 
 ![tracker app](https://github.com/hardiknarula01/FUSIONHACKZ/assets/127376225/db378b67-999e-432d-83f8-081dbdebe0fa)
 
-<h1>Features</h1>
+<h1>💠Features</h1>
 <br>
 <h3>Expense input:</h3>Users should be able to input their daily expenses , specifing the amount , category and brief description
 Category Management: The app should include pre-defined spending categories (e.g., groceries, entertainment, utilities) and allow users to add custom categories.
@@ -20,7 +20,7 @@ Category Management: The app should include pre-defined spending categories (e.g
 <h3>Financial Tips: </h3>Incorporate basic financial tips within the app to educate users on healthy spending habits and financial management.
 <br>
 <br>
-<h1>How to contribute</h1>
+<h1>✨️How to contribute</h1>
 
 To get started with the Expense Tracker Web App, follow these steps for setting up in your local systems:
 
@@ -38,7 +38,7 @@ To get started with the Expense Tracker Web App, follow these steps for setting 
 <br>
 <h3>Open your web browser and visit http://localhost:3000 to use the Expense Tracker Web App.</h3>
 <br>
-<h2>Contributions</h2>
+<h2>⭐️Contributions</h2>
 We welcome contributions from the community to improve and enhance the Expense Tracker Web App. To contribute, follow these steps:
 
 1.Fork the repository.
