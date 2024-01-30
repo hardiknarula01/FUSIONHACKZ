@@ -28,7 +28,7 @@ To get started with the Expense Tracker Web App, follow these steps for setting 
 ```bash cd FUSIONHACKZ ```
 <br>
 <H3> Install dependencies:</H3>
-```bash npm install```
+```javascript npm install```
 <br>
 <h3>Run the app:</h3>
 ```bash npm start ```
