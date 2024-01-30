@@ -25,13 +25,13 @@ To get started with the Expense Tracker Web App, follow these steps for setting 
 ```bash git clone https://github.com/hardiknarula01/FUSIONHACKZ.git```
 <br>
 <h3>Navigate to the project directory:</h3>
-```bash cd FUSIONHACKZ ```
+``` cd FUSIONHACKZ ```
 <br>
 <H3> Install dependencies:</H3>
-```javascript npm install```
+``` npm install```
 <br>
 <h3>Run the app:</h3>
-```bash npm start ```
+``` npm start ```
 <br>
 <h3>Open your web browser and visit http://localhost:3000 to use the Expense Tracker Web App.</h3>
 <br>
