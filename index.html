@@ -43,9 +43,14 @@
       </div>
 
     <script>
+      
+      import { globalPassWord } from './script.js'
+      import { globalUserName } from './script.js'
+      const fs =require ('fs')
+      let dataStored =JSON.parse(fs.readFileSync('./PeopleData.json','utf8'))
         class ExpenseTracker {
-            constructor() {
-                this.expenses = [];
+            constructor(data) {
+                this.expenses = data;
             }
 
             addExpense(name, amount, category) {
@@ -77,14 +82,28 @@
                 });
             }
         }
-
-        const expenseTracker = new ExpenseTracker();
+        let temp =0;
+        for(let i=0;i<dataStored.length;i++)
+        {
+          if(dataStored[i].username==globalUserName&&dataStored[i].password==globalPassWord)
+          {
+            temp =i;
+            break;
+          }
+        }
+        
+        const expenseTracker = new ExpenseTracker(dataStored[temp].expenses);
 
         function addExpense() {
             const name = document.getElementById('expenseName').value;
             const amount = parseFloat(document.getElementById('expenseAmount').value);
             const category = document.getElementById('expenseCategory').value;
-
+            dataStored[temp].expenses.push({
+              name: name,
+              amount :amount,
+              category :category,
+              date :new Date().toLocaleDateString()
+            })
             if (name && !isNaN(amount)) {
                 expenseTracker.addExpense(name, amount, category);
                 // Clear input fields
@@ -94,6 +113,7 @@
         }
 
         function removeExpense(index) {
+            dataStored[temp].expenses.splice(index,1)
             expenseTracker.removeExpense(index);
         }
     </script>
