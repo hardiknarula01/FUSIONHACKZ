@@ -13,8 +13,7 @@ Many individual struggle to effectively manage their personal finanaces that lea
 <h3>Expense input:</h3>Users should be able to input their daily expenses , specifing the amount , category and brief description
 Category Management: The app should include pre-defined spending categories (e.g., groceries, entertainment, utilities) and allow users to add custom categories.
 <br>
-<h3>Budget Visualization:</h3> Provide a visual representation of the user's budget, including charts or graphs to show spending patterns and areas where they might be overspending.
-<br>
+
 <h3>User-Friendly Interface:</h3> The web app should have an intuitive and straightforward interface, making it easy for beginners to navigate and use without feeling overwhelmed.
 <br>
 <h3>Financial Tips: </h3>Incorporate basic financial tips within the app to educate users on healthy spending habits and financial management.
