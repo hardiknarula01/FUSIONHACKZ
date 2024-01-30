@@ -14,15 +14,58 @@
     --colorLight2: #f9f7f7;
 }
 
+
 .wrapper {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    
     color: var(--colorLight2);
     background-color: #112d4e;
     background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
 }
 
+/*title*/
+.btn1 {
+
+  font-size: 90px;
+  line-height: 75px;
+  padding: 50px 0 30px;
+  text-align: center;
+  background-color:#112d4e;
+  width: fit-content;
+  color: white;
+
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+.btn1::before{
+  content: "";
+  position: absolute;
+  background-color: rgb(38, 103, 119);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s ease;
+}
+
+.btn1:hover{
+  color: rgba(90, 240, 205, 0.905);
+  
+}
+
+.btn1:hover::before{
+  transform: scaleX(1);
+}
+/* normal button*/
 .btn {
     background-color:#112d4e;
     width: fit-content;
@@ -69,8 +112,273 @@
     padding: 10px;
     border-bottom: 1px solid #eee;
 }
+/* tipss Section  */
+.tipsSection {
+    margin-top: 4rem;
+    background-color: #e7e7e7;
+  }
+  
+  .tipsTitle {
+    color: #e84949;
+    font-size: 90px;
+    line-height: 75px;
+    padding: 50px 0 30px;
+    text-align: center;
+  }
+  
+  .tipsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    /* width: 100%; */
+  }
+  
+  #tips1 {
+    background-image: url(./images/tip1.jpg);
+    right: 5%;
+  }
+  
+  #tips2 {
+    background-image: url(./images/tip2.jpg);
+    left: 5%;
+  }
+  
+  #tips3 {
+    background-image: url(./images/tip3.jpg);
+    right: 5%;
+  }
+  
+  #tips4 {
+    background-image: url(./images/tip4.jpg);
+    left: 5%;
+  }
+  
+  .tipsCard {
+    width: 80%;
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+    margin: 2rem auto;
+    z-index: 2;
+  }
+  
+  .tipsCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    z-index: 1;
+    transition: 0.5s all;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  
+  .tipsCard:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .tipsNumber {
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: #fff;
+    display: none;
+    z-index: 10;
+    transition: 0.8s;
+  }
+  
+  .rightNumber {
+    top: -45px;
+    right: -45px;
+  }
+  
+  .leftNumber {
+    top: -45px;
+    left: -45px;
+  }
+  
+  .tipsCard:hover .tipsNumber {
+    display: block;
+  }
+  
+  .tipsCard::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1f1f1f9a;
+    z-index: 0;
+  }
+  
+  .tipsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    position: absolute;
+    z-index: 5;
+    transition: all 0.4s;
+  }
+  
+  .lefttipsContent {
+    left: 5%;
+  }
+  
+  .righttipsContent {
+    right: 5%;
+  }
+  
+  .tipsSkillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60%;
+    gap: 1em;
+  }
+  
+  .tipsSkill {
+    width: 40px;
+  }
+  .tipsHeading {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+  }
+  
+  .tipsSubHeading {
+    font-size: 16px;
+    font-style: italic;
+    width: 70%;
+  }
+  
+  .tipsCard:hover .tipsContent {
+    transform: scale(1.1);
+  }
+  .btnGroup {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+  }
+  
+  .btnGroup .btnProject {
+    border: none;
+    outline: none;
+  }
+  .icon {
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition: all 0.4s;
+  }
+  
+  .icon:hover {
+    color: #e84949;}
+    /* reach Me Section Start  */
+.reachMeSection {
+  width: 100%;
+  background-color: #e7e7e7;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.container h2 {
+  font-size: 5em;
+  padding-top: 2rem;
+  color: #e84949;
+}
 
+.container h3 {
+  font-size: 3em;
+  color: #343d68aa;
+}
 
+.reachUsForm {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+}
 
+.reachUsForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* 
+.formFieldContainer{
+  width: 100%;
+} */
+
+.formField {
+  width: 100%;
+  height: 42px;
+  padding: 0 2rem;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #1f1f1f;
+  background: #ffffff97;
+  font-weight: 500;
+}
+
+.formfield:focus {
+  border: none;
+}
+
+.formFieldContainer textarea {
+  height: auto;
+  padding-top: 1rem;
+}
+
+.formBtn .btn {
+  transition: 0.5s;
+  border: none;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.formBtn .btn:hover {
+  transform: scale(0.9);
+}
+
+.formBtn .btn i {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+/* reach Me Section Ends  */
+
+/* Footer Section Start  */
+footer {
+  background: #343d68;
+  position: relative;
+  padding: 5rem;
+}
+
+.footerFadedText {
+  font-size: 5em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #535c87;
+  user-select: none;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+}
