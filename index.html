@@ -8,12 +8,97 @@
 </head>
 <body>
     <!-- Wrapper -->
-    <div class="wrapper">
-        <h1>Expense Tracker App</h1>
-        <div class="tabContainer">
-          <p class="tab currentTab" data-userWeather>Your finances</p>
-          <p class="tab" data-searchWeather>Search tips</p>
-        </div>
+    
+         
+       <div class="wrapper">
+            <div class="btn">
+      
+             <h1>Expense Tracker📊</h1>    </div>
+                         <div class="form-group">
+            <div>Expense Name:</div>
+            <input type="text" id="expenseName" required>
+              </div><br>
+
+              <div class="form-group">
+            <div>Amount:</div>
+            <input type="number" id="expenseAmount" required>
+                </div>
+                  <br>
+                 <div class="form-group">
+                  <div>Category:</div>
+                    <select id="expenseCategory">
+                <option value="food">Food</option>
+                <option value="utilities">Utilities</option>
+                <option value="transportation">Transportation</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="other">Other</option>
+                   </select>
+                    </div>
+                    <br>
+                        <button type="button" onclick="addExpense()">Add Expense</button>
+                    <br>
+                    <br>
+                      <h2>Expenses</h2>
+                        <div id="expenseList"></div>
+      </div>
+
+    <script>
+        class ExpenseTracker {
+            constructor() {
+                this.expenses = [];
+            }
+
+            addExpense(name, amount, category) {
+                const expense = { name, amount, category, date: new Date().toLocaleDateString() };
+                this.expenses.push(expense);
+                this.updateExpenseList();
+            }
+
+            removeExpense(index) {
+                this.expenses.splice(index, 1);
+                this.updateExpenseList();
+            }
+
+            updateExpenseList() {
+                const expenseList = document.getElementById('expenseList');
+                expenseList.innerHTML = '';
+
+                this.expenses.forEach((expense, index) => {
+                    const listItem = document.createElement('div');
+                    listItem.className = 'expense-item';
+                    listItem.innerHTML = `
+                        <span>${expense.name}</span>
+                        <span>₹${expense.amount.toFixed(2)}</span>
+                        <span>${expense.category}</span>
+                        <span>${expense.date}</span>
+                        <button onclick="removeExpense(${index})">Remove</button>
+                    `;
+                    expenseList.appendChild(listItem);
+                });
+            }
+        }
+
+        const expenseTracker = new ExpenseTracker();
+
+        function addExpense() {
+            const name = document.getElementById('expenseName').value;
+            const amount = parseFloat(document.getElementById('expenseAmount').value);
+            const category = document.getElementById('expenseCategory').value;
+
+            if (name && !isNaN(amount)) {
+                expenseTracker.addExpense(name, amount, category);
+                // Clear input fields
+                document.getElementById('expenseName').value = '';
+                document.getElementById('expenseAmount').value = '';
+            }
+        }
+
+        function removeExpense(index) {
+            expenseTracker.removeExpense(index);
+        }
+    </script>
+      
+       
     
 </body>
 </html>
