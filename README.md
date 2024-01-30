@@ -4,9 +4,7 @@
 
   <h1>Problem Statement<h1> 
     <br>
-Many individual struggle to effectively manage their personal finanaces that leads to stress and uncertainity about their spending habits.The goal of this project is to create a simple and user friendly expense tracker app that helps beginners to control their finances. The web app provide features for inputting daily expenses , catagorize their expenses and visualizing their budget in a easy and more understandable way.![tracker app]![tracker app](
-
-![tracker app](https://github.com/hardiknarula01/FUSIONHACKZ/assets/127376225/db378b67-999e-432d-83f8-081dbdebe0fa)
+Many individual struggle to effectively manage their personal finanaces that leads to stress and uncertainity about their spending habits.The goal of this project is to create a simple and user friendly expense tracker app that helps beginners to control their finances. The web app provide features for inputting daily expenses , catagorize their expenses and visualizing their budget in a easy and more understandable way.
 
 <h1>💠Features</h1>
 <br>
@@ -24,16 +22,16 @@ Category Management: The app should include pre-defined spending categories (e.g
 To get started with the Expense Tracker Web App, follow these steps for setting up in your local systems:
 
 <h3>Clone the Repository:</h3>
-```git clone https://github.com/hardiknarula01/FUSIONHACKZ.git```
+```bash git clone https://github.com/hardiknarula01/FUSIONHACKZ.git```
 <br>
 <h3>Navigate to the project directory:</h3>
-``` cd FUSIONHACKZ ```
+```bash cd FUSIONHACKZ ```
 <br>
 <H3> Install dependencies:</H3>
-``` npm install```
+```bash npm install```
 <br>
 <h3>Run the app:</h3>
-```  npm start ```
+```bash npm start ```
 <br>
 <h3>Open your web browser and visit http://localhost:3000 to use the Expense Tracker Web App.</h3>
 <br>
